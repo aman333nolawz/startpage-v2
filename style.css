@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("/startpage-v2/fonts/Fira Code Regular Nerd Font Complete.ttf");
+}
+
+:root {
+  --bg-color: #282a36;
+  --search-input-color: #f8f8f2;
+  --search-btn-color: #6272a4;
+  --primary-color: #50fa7b;
+  --primary-dim-color: hsl(135, 94%, 34%);
+  --secondary-color: #bd93f9;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  font-family: "Fira Code", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1000px;
+  width: 70%;
+  height: 330px;
+  margin: 10rem 0;
+  display: flex;
+}
+.img-holder {
+  max-width: 15em;
+  width: 40%;
+  margin-right: 1em;
+  margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
+}
+.img-holder img {
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  opacity: 0.6;
+}
+
+.img-holder #time {
+  width: auto;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: hsl(0, 0%, 86%);
+  font-size: 4rem;
+}
+
+.searchbox {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.searchbox input {
+  font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  width: 100%;
+  padding: 0.7em;
+  color: var(--search-input-color);
+  background-color: var(--bg-color);
+  border: none;
+  outline: none;
+}
+
+.searchbox:focus-within {
+  outline: 1px var(--secondary-color) solid;
+}
+
+.searchbox button {
+  font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  padding: 0 1em;
+  color: var(--search-btn-color);
+  background-color: var(--bg-color);
+  border: none;
+  outline: none;
+  transition: background-color 0.4s ease;
+}
+
+.searchbox button:focus-visible,
+.searchbox button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main {
+  width: 100%;
+  padding: 1.5em;
+  background-color: hsla(232, 14%, 31%, 0.3);
+}
+
+.main h1 {
+  color: var(--primary-color);
+}
+
+.main h2 {
+  color: var(--primary-dim-color);
+
+  margin-bottom: 1em;
+}
+
+.main a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding: 0.5em;
+  position: relative;
+  outline: none;
+}
+
+.main a:hover,
+.main a:focus-visible,
+.main a:active {
+  color: var(--primary-color);
+}
+
+.main a:hover::before,
+.main a:focus-visible::before {
+  content: "\0ea9c";
+  position: absolute;
+  left: -0.75rem;
+}
+
+.bookmarks {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.bookmarks-row {
+  display: flex;
+  flex-direction: column;
+}
