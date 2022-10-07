@@ -35,4 +35,5 @@ function setTime() {
     "0"
   )}<br/>--<br/>${String(today.getMinutes()).padStart(2, "0")}`;
 }
+setTime();
 setInterval(setTime, 1000);
