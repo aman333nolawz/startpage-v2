@@ -6,7 +6,8 @@
 
 @font-face {
   font-family: "Fira Code";
-  src: url("fonts/Fira Code Regular Nerd Font Complete.ttf");
+  src: url("fonts/Fira Code Regular Nerd Font Complete.woff2");
+  font-display: swap;
 }
 
 :root {
