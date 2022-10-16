@@ -107,6 +107,7 @@ body {
   background-color: hsla(232, 14%, 31%, 0.3);
   overflow: auto;
   scrollbar-color: var(--secondary-color) var(--third-color);
+  scrollbar-width: thin;
 }
 
 .main h1 {
