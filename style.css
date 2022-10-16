@@ -33,6 +33,7 @@ body {
 .container {
   max-width: 1080px;
   width: 80%;
+  height: 340px;
   display: flex;
 }
 .img-holder {
@@ -44,7 +45,6 @@ body {
   position: relative;
 }
 .img-holder img {
-  height: 330px;
   object-fit: cover;
   filter: blur(2px);
   opacity: 0.6;
