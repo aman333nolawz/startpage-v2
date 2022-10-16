@@ -18,6 +18,7 @@
   --primary-color: #50fa7b;
   --primary-dim-color: hsl(135, 94%, 34%);
   --secondary-color: rgb(189, 147, 249);
+  --secondary-dim-color: hsl(265 89% 70%);
   --third-color: #44475a;
 }
 
@@ -104,7 +105,7 @@ body {
   width: 100%;
   padding: 1.5em;
   background-color: hsla(232, 14%, 31%, 0.3);
-  overflow: scroll;
+  overflow: auto;
   scrollbar-color: var(--secondary-color) var(--third-color);
 }
 
@@ -140,16 +141,20 @@ body {
 }
 
 .main::-webkit-scrollbar {
-  width: 1em;
+  width: 0.4em;
+  height: 0.4em;
 }
 
 .main::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--third-color);
 }
 
 .main::-webkit-scrollbar-thumb {
   background-color: var(--secondary-color);
-  outline: 1px solid var(--third-color);
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-dim-color);
 }
 
 .bookmarks {
