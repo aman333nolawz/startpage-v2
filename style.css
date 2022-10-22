@@ -13,10 +13,12 @@
 
 :root {
   --bg-color: #282a36;
+  --bg-dim-color: #303241;
+  --fg-color: #eee;
   --search-input-color: #f8f8f2;
   --search-btn-color: #6272a4;
   --primary-color: #50fa7b;
-  --primary-dim-color: hsl(135, 94%, 34%);
+  --primary-dim-color: rgba(80, 250, 123, 0.6);
   --secondary-color: rgb(189, 147, 249);
   --secondary-dim-color: hsl(265 89% 70%);
   --third-color: #44475a;
@@ -98,7 +100,7 @@ body {
 .searchbox button:focus-visible,
 .searchbox button:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-dim-color);
 }
 
 .main {
@@ -167,4 +169,38 @@ body {
 .bookmarks-row {
   display: flex;
   flex-direction: column;
+}
+
+dialog {
+  margin: auto;
+  padding: 1em;
+  border: none;
+  background-color: var(--bg-dim-color);
+  color: var(--fg-color);
+  width: 70vw;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.4);
+}
+
+dialog h2 {
+  color: var(--primary-color);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  margin-block: 1.7em;
+}
+
+.input-field {
+  font-size: 1rem;
+  font-family: "FiraCode", monospace;
+  padding: 0.7em;
+  background-color: var(--bg-color);
+  color: var(--search-input-color);
+  border: none;
+  outline: none;
 }

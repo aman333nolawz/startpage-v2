@@ -10,8 +10,10 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
-    <script defer src="time.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="scripts/time.js"></script>
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/popup.js"></script>
+    <script defer src="scripts/keybinding.js"></script>
   </head>
 
   <body>
@@ -21,7 +23,7 @@
         <div class="time-container" id="time">00<br />--<br />00</div>
       </div>
       <div class="main">
-        <h1 class="greeting">Hello, Nolawz</h1>
+        <h1 class="greeting" id="username">Hello, Nolawz</h1>
         <h2 id="today">Today is someday</h2>
         <div class="searchbox">
           <input type="search" id="search" />
@@ -48,6 +50,29 @@
           </div>
         </div>
       </div>
+
+      <dialog id="settings" class="modal">
+        <h2>Settings</h2>
+
+        <div class="field">
+          <label for="userSel">Username</label>
+          <input
+            class="input-field"
+            type="text"
+            id="userSel"
+            placeholder="Username"
+            value="Nolawz"
+          />
+        </div>
+
+        <div class="field">
+          <label for="engineSel">Search Engine</label>
+          <select class="input-field" name="engine" id="engineSel">
+            <option value="google" selected>Google</option>
+            <option value="duckduckgo">Duck Duck Go</option>
+          </select>
+        </div>
+      </dialog>
     </div>
   </body>
 </html>
