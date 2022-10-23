@@ -1,8 +1,10 @@
 const search = document.getElementById("search");
 const searchButton = document.getElementById("searchButton");
 const username = document.getElementById("username");
+const titleSel = document.getElementById("titleSel");
 const userSel = document.getElementById("userSel");
 const engineSel = document.getElementById("engineSel");
+const savePref = document.getElementById("savePref");
 
 const engines = {
   google: "https://google.com/search?q=",
@@ -19,6 +21,19 @@ function setEngine(engine) {
 function setUser(name) {
   localStorage.setItem("username", name);
   username.innerText = "Hello, " + name;
+  userSel.value = name;
+}
+
+function setTitle(title) {
+  localStorage.setItem("title", title);
+  document.title = title;
+  titleSel.value = title;
+}
+
+if (localStorage.getItem("title")) {
+  setTitle(localStorage.getItem("title"));
+} else {
+  setTitle("New Tab");
 }
 
 if (localStorage.getItem("engine")) {
@@ -66,10 +81,8 @@ searchButton.onclick = () => {
   parseSearch(search.value);
 };
 
-engineSel.onchange = () => {
+savePref.onclick = () => {
   setEngine(engineSel.value);
-};
-
-userSel.onchange = () => {
   setUser(userSel.value);
+  setTitle(titleSel.value);
 };

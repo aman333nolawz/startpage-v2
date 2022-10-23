@@ -3,6 +3,9 @@ document.addEventListener("keydown", (e) => {
     return;
   }
   if (e.key == "s") {
-    showSettings();
+    if (!settingsDialog.open) {
+      e.preventDefault();
+      showSettings();
+    }
   }
 });

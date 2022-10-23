@@ -204,3 +204,25 @@ dialog h2 {
   border: none;
   outline: none;
 }
+
+.input-field:focus {
+  outline: 1px solid var(--secondary-color);
+}
+
+.btn {
+  padding: 0.3125rem 0.9375rem;
+  font-size: 1.1em;
+  font-family: "FiraCode", monospace;
+  background-color: var(--bg-dim-color);
+  color: var(--fg-color);
+  cursor: pointer;
+  transition: all 0.22s ease-in-out 0s;
+  border: 3px solid var(--secondary-color);
+  box-shadow: var(--secondary-color) 2px 2px 0 0;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: var(--secondary-color) 5px 5px 0 0;
+}

@@ -55,6 +55,17 @@
         <h2>Settings</h2>
 
         <div class="field">
+          <label for="titleSel">Title</label>
+          <input
+            class="input-field"
+            type="text"
+            id="titleSel"
+            placeholder="Title for the startpage"
+            value="New Tab"
+          />
+        </div>
+
+        <div class="field">
           <label for="userSel">Username</label>
           <input
             class="input-field"
@@ -72,6 +83,10 @@
             <option value="duckduckgo">Duck Duck Go</option>
           </select>
         </div>
+
+        <form method="dialog">
+          <input class="btn" type="submit" name="savePref" value="Save" id="savePref" />
+        </form>
       </dialog>
     </div>
   </body>
