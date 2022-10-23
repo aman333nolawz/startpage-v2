@@ -4,6 +4,7 @@ const username = document.getElementById("username");
 const titleSel = document.getElementById("titleSel");
 const userSel = document.getElementById("userSel");
 const engineSel = document.getElementById("engineSel");
+const imgSel = document.getElementById("imgSel");
 const savePref = document.getElementById("savePref");
 
 const engines = {
@@ -30,6 +31,12 @@ function setTitle(title) {
   titleSel.value = title;
 }
 
+function setImg(src) {
+  localStorage.setItem("image", src);
+  document.getElementById("startImg").src = src;
+  imgSel.value = src;
+}
+
 if (localStorage.getItem("title")) {
   setTitle(localStorage.getItem("title"));
 } else {
@@ -46,6 +53,12 @@ if (localStorage.getItem("username")) {
   setUser(localStorage.getItem("username"));
 } else {
   setUser("Nolawz");
+}
+
+if (localStorage.getItem("image")) {
+  setImg(localStorage.getItem("image"));
+} else {
+  setImg("images/startpage.png");
 }
 
 search.focus();
@@ -85,4 +98,5 @@ savePref.onclick = () => {
   setEngine(engineSel.value);
   setUser(userSel.value);
   setTitle(titleSel.value);
+  setImg(imgSel.value);
 };

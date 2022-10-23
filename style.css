@@ -18,7 +18,7 @@
   --search-input-color: #f8f8f2;
   --search-btn-color: #6272a4;
   --primary-color: #50fa7b;
-  --primary-dim-color: rgba(80, 250, 123, 0.6);
+  --primary-dim-color: rgba(80, 250, 123, 0.7);
   --secondary-color: rgb(189, 147, 249);
   --secondary-dim-color: hsl(265 89% 70%);
   --third-color: #44475a;
@@ -210,7 +210,7 @@ dialog h2 {
 }
 
 .btn {
-  padding: 0.3125rem 0.9375rem;
+  padding: 0.3125em 0.9375em;
   font-size: 1.1em;
   font-family: "FiraCode", monospace;
   background-color: var(--bg-dim-color);

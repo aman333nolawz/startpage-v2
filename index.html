@@ -1,93 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>New tab</title>
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Fira Code Regular Nerd Font Complete.woff2"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <script defer src="scripts/time.js"></script>
-    <script defer src="scripts/script.js"></script>
-    <script defer src="scripts/popup.js"></script>
-    <script defer src="scripts/keybinding.js"></script>
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="img-holder">
-        <img src="images/startpage.gif" alt="GIF" />
-        <div class="time-container" id="time">00<br />--<br />00</div>
-      </div>
-      <div class="main">
-        <h1 class="greeting" id="username">Hello, Nolawz</h1>
-        <h2 id="today">Today is someday</h2>
-        <div class="searchbox">
-          <input type="search" id="search" />
-          <button id="searchButton">&#61442;</button>
-        </div>
-        <div class="bookmarks">
-          <div class="bookmarks-row">
-            <a href="https://youtube.com">YouTube</a>
-            <a href="https://discord.com/app">Discord</a>
-            <a href="https://reddit.com">Reddit</a>
-            <a href="https://instagram.com/">Instagram</a>
-          </div>
-          <div class="bookmarks-row">
-            <a href="https://github.com">Github</a>
-            <a href="https://gmail.com">Gmail</a>
-            <a href="https://keybr.com">Keybr</a>
-            <a href="https://monkeytype.com">Monkey Type</a>
-          </div>
-          <div class="bookmarks-row">
-            <a href="https://ctftime.org">CTF Time</a>
-            <a href="https://gchq.github.io/CyberChef/">Cyber Chef</a>
-            <a href="https://tryhackme.com/">Try Hack Me</a>
-            <a href="https://book.hacktricks.xyz/welcome/readme">Hack Tricks</a>
-          </div>
-        </div>
-      </div>
+<head>
+  <title>New tab</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  <link rel="preload" as="font" href="fonts/Fira Code Regular Nerd Font Complete.woff2" type="font/woff2"
+    crossorigin="anonymous" />
+  <script defer src="scripts/time.js"></script>
+  <script defer src="scripts/script.js"></script>
+  <script defer src="scripts/popup.js"></script>
+  <script defer src="scripts/keybinding.js"></script>
+</head>
 
-      <dialog id="settings" class="modal">
-        <h2>Settings</h2>
-
-        <div class="field">
-          <label for="titleSel">Title</label>
-          <input
-            class="input-field"
-            type="text"
-            id="titleSel"
-            placeholder="Title for the startpage"
-            value="New Tab"
-          />
-        </div>
-
-        <div class="field">
-          <label for="userSel">Username</label>
-          <input
-            class="input-field"
-            type="text"
-            id="userSel"
-            placeholder="Username"
-            value="Nolawz"
-          />
-        </div>
-
-        <div class="field">
-          <label for="engineSel">Search Engine</label>
-          <select class="input-field" name="engine" id="engineSel">
-            <option value="google" selected>Google</option>
-            <option value="duckduckgo">Duck Duck Go</option>
-          </select>
-        </div>
-
-        <form method="dialog">
-          <input class="btn" type="submit" name="savePref" value="Save" id="savePref" />
-        </form>
-      </dialog>
+<body>
+  <div class="container">
+    <div class="img-holder">
+      <img src="images/startpage.png" alt="Startpage image" id="startImg" />
+      <div class="time-container" id="time">00<br />--<br />00</div>
     </div>
-  </body>
+    <div class="main">
+      <h1 class="greeting" id="username">Hello, Nolawz</h1>
+      <h2 id="today">Today is someday</h2>
+      <div class="searchbox">
+        <input type="search" id="search" />
+        <button id="searchButton">&#61442;</button>
+      </div>
+      <div class="bookmarks">
+        <div class="bookmarks-row">
+          <a href="https://youtube.com">YouTube</a>
+          <a href="https://discord.com/app">Discord</a>
+          <a href="https://reddit.com">Reddit</a>
+          <a href="https://instagram.com/">Instagram</a>
+        </div>
+        <div class="bookmarks-row">
+          <a href="https://github.com">Github</a>
+          <a href="https://gmail.com">Gmail</a>
+          <a href="https://keybr.com">Keybr</a>
+          <a href="https://monkeytype.com">Monkey Type</a>
+        </div>
+        <div class="bookmarks-row">
+          <a href="https://ctftime.org">CTF Time</a>
+          <a href="https://gchq.github.io/CyberChef/">Cyber Chef</a>
+          <a href="https://tryhackme.com/">Try Hack Me</a>
+          <a href="https://book.hacktricks.xyz/welcome/readme">Hack Tricks</a>
+        </div>
+      </div>
+    </div>
+
+    <dialog id="settings" class="modal">
+      <h2>Settings</h2>
+
+      <div class="field">
+        <label for="titleSel">Title</label>
+        <input class="input-field" type="text" id="titleSel" placeholder="Title for the startpage" value="New Tab" />
+      </div>
+
+      <div class="field">
+        <label for="userSel">Username</label>
+        <input class="input-field" type="text" id="userSel" placeholder="Username" value="Nolawz" />
+      </div>
+
+      <div class="field">
+        <label for="imgSel">Image</label>
+        <input class="input-field" type="text" id="imgSel" placeholder="Image in the startpage"
+          value="images/startpage.png" />
+      </div>
+
+
+      <div class="field">
+        <label for="engineSel">Search Engine</label>
+        <select class="input-field" name="engine" id="engineSel">
+          <option value="google" selected>Google</option>
+          <option value="duckduckgo">Duck Duck Go</option>
+        </select>
+      </div>
+
+      <form method="dialog">
+        <input class="btn" type="submit" name="savePref" value="Save" id="savePref" />
+      </form>
+    </dialog>
+  </div>
+</body>
+
 </html>
